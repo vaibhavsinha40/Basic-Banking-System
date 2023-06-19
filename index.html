@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic banking system</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Sparks Foundation</a>
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+    <nav class="navbar">
+      <a href="#main">home</a>
+      <a href="#details">Customers</a>
+      <a href="#transfer-container">Transfer money</a>
+      <a href="#check-history">History</a>
+    </nav>
+  </header>
+
+  <!-- home section -->
+  <section class="home" id="main">
+    <div class='mainpage'>
+      <div id='intro'>
+        <h1 class="h1">Welcome to Spark Bank!</h1>
+        <p>Securely manage your money with our trusted banking platform</p>
+        <button> <a href="" class="btn">About me</a></button>
+      </div>
+      <img src="image/Group 48249.jpg" alt="" />
+    </div>
+
+  </section>
+  <!-- home section ends -->
+
+  <!-- features section  -->
+  <section class="features" id="features">
+    <h1 class="heading">our <span>Features</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="image/customer.jpg" alt="">
+        <h3>view all customers</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, deleniti.</p>
+        <a href="#details" class="btn">read more</a>
+      </div>
+      <div class="box">
+        <img src="image/transaction.jpeg" alt="">
+        <h3>Easy transaction</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, deleniti.</p>
+        <a href="#transfer-container" class="btn">read more</a>
+      </div>
+      <div class="box">
+        <img src="image/history.jpg" alt="">
+        <h3>check history</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, deleniti.</p>
+        <a href="#check-history" class="btn">read more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- table section -->
+  <section class="details" id="details">
+    <h2 class="heading">Account Details</h2>
+    <table id="accountTable">
+
+      <tr>
+        <th>Account No.</th>
+        <th>Email ID</th>
+        <th>Name</th>
+        <th>Balance</th>
+      </tr>
+
+      <tr>
+        <td>001</td>
+        <td>john@example.com</td>
+        <td>John Doe</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>max@example.com</td>
+        <td>Max Brown</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>leo@example.com</td>
+        <td>Leo Smith</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>004</td>
+        <td>ava@example.com</td>
+        <td>Ava Davis</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>005</td>
+        <td>ben@example.com</td>
+        <td>Ben Clark</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>006</td>
+        <td>zeo@example.com</td>
+        <td>Zoe Wilson</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>007</td>
+        <td>eli@example.com</td>
+        <td>Eli Anderson</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>008</td>
+        <td>mia@example.com</td>
+        <td>Mia Johnson</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>009</td>
+        <td>jay@example.com</td>
+        <td>Jay Lee</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>010</td>
+        <td>sam@example.com</td>
+        <td>Sam Taylor</td>
+        <td>5000</td>
+      </tr>
+
+      <!-- Add more rows for other members -->
+    </table>
+  </section>
+
+  <div class="transfer-container" id="transfer-container">
+    <h2 class="heading">Transfer Money</h2>
+    <div class="transfer">
+      <label for="fromAccount">Sender:</label>
+      <select id="fromAccount">
+        <option value="001"> (001)</option>
+        <option value="002"> (002)</option>
+        <option value="003"> (003)</option>
+        <option value="004"> (004)</option>
+        <option value="005"> (005)</option>
+        <option value="006"> (006)</option>
+        <option value="007"> (007)</option>
+        <option value="008"> (008)</option>
+        <option value="009"> (009)</option>
+        <option value="010"> (010)</option>
+        <!-- Add options for other members -->
+      </select>
+      <br><br>
+      <label for="toAccount">Receiver:</label>
+      <select id="toAccount">
+        <option value="001"> (001)</option>
+        <option value="002"> (002)</option>
+        <option value="003"> (003)</option>
+        <option value="004"> (004)</option>
+        <option value="005"> (005)</option>
+        <option value="006"> (006)</option>
+        <option value="007"> (007)</option>
+        <option value="008"> (008)</option>
+        <option value="009"> (009)</option>
+        <option value="010"> (010)</option>
+        <!-- Add options for other members -->
+      </select>
+      <br><br>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" min="1">
+    </div>
+    <button class="btn button" onclick="transferMoney()">Transfer</button>
+  </div>
+
+  <section class="check-history" id="check-history">
+    <h2 class="transaction-history heading">Transaction History</h2>
+    <table id="transactionTable">
+      <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Amount</th>
+        <th>Balance</th>
+      </tr>
+    </table>
+  </section>
+
+
+  <script src="script1.js"></script>
+</body>
+
+</html>
